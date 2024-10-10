@@ -1,0 +1,37 @@
+{
+  "login":[
+    {
+      "subadmin": [
+        {
+          "admin_name": "meet",
+          "password": "123123",
+          "id": 1
+        }
+      ],
+      "faculty": [
+        {
+          "faculty_name": "gharvit dhameliya",
+          "department": "UI&UX",
+          "password": "1212121",
+          "gender": "male",
+          "id": 1
+        }
+      ],
+      "student": [
+        {
+          "id": "9065",
+          "student_name": "meet ",
+          "title": "React js",
+          "description": "react js task",
+          "assignments": "",
+          "start_time": "2024-10-10",
+          "end_time": "2024-10-31",
+          "assigned_faculty": "garvit dhaeliya",
+          "password": "123123",
+          "assignments_file": "C:\\fakepath\\Woman-2.zip",
+          "role": "student"
+        }
+      ]
+    }
+  ]
+}
