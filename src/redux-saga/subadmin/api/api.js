@@ -29,7 +29,7 @@ export const postSubadmin = (action) => {
     .then((res) => {
       const data = action.paylod;
       const status = res.status;
-      console.log(res);
+      // console.log(res);
       return { data, status };
     })
     .catch((err) => console.log(err));

@@ -1,10 +1,4 @@
-export const Login=[
-    {
-        name:"login",
-        path:"/",
-        role:"login"
-    }
-]
+
 export const admin=[
     {
         name:"admin",
@@ -39,6 +33,7 @@ export const facultysidebar=[
 export const studentsidebar=[
     {
         name:"student",
-        path:"/student"
+        path:"/student",
+        role:"student"
     } 
 ]

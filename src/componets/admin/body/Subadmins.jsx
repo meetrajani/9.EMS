@@ -8,6 +8,8 @@ import { DELETE_SUBADMIN_PROGESS } from "../../../redux-saga/subadmin/action/act
 const Subadmins = () => {
   const dispatch = useDispatch();
   const subadmin = useSelector((state) => state.SubadminReducer.subadmin);
+  // console.log(subadmin);
+  
 
   // GET SUBADMIN
 
@@ -17,7 +19,12 @@ const Subadmins = () => {
 
   // POST SUBADMIN
 
-  const [add, setadd] = useState([]);
+  const [add, setadd] = useState({
+    id: JSON.stringify(Math.floor(Math.random() * 10000)),
+    admin_name: "",
+    password: "",
+    role: "admin",
+  });
 
   const changedata = (e) => {
     setadd({ ...add, [e.target.name]: e.target.value });
@@ -29,8 +36,8 @@ const Subadmins = () => {
 
   // DELETE SUBADMIN
 
-  const Deletesubadmin = (_id) => {
-    dispatch({ type: DELETE_SUBADMIN_PROGESS, paylod: _id });
+  const Deletesubadmin = (id) => {
+    dispatch({ type: DELETE_SUBADMIN_PROGESS, paylod: id });
     // console.log(_id);
   };
 

@@ -5,66 +5,70 @@ import { Route, Routes } from "react-router-dom";
 import Subadmins from "./componets/admin/body/Subadmins";
 import Faculty from "./componets/faculty/Faculty";
 import Student from "./componets/faculty/Student";
-import { admin, facultysidebar,studentsidebar } from "./componets/common/Data/sidebarData";
-import Facultysubadmin from "./componets/admin/body/Facultyadmin";
-import Studentsubadmin from "./componets/admin/body/Studentadmin";
-import student_student from "./componets/student/student_student";
+import {
+  admin,
+  facultysidebar,
+  studentsidebar,
+} from "./componets/common/Data/sidebarData";
+import Facultyadmin from "./componets/admin/body/Facultyadmin";
+import Studentadmin from "./componets/admin/body/Studentadmin";
+import Student_student from "./componets/student/student_student";
 
 function App() {
-  let role = "admin";
 
-  if (role === "admin") {
-    return (
+  let role = "admin"
+
+  if(role === "admin"){
+    return(
       <>
-        <Header />
+        <Header/>
         <div className="row">
           <div className="col-2">
-            <Asidebar data={admin} />
+            <Asidebar data={admin}/>
           </div>
           <div className="col-10">
             <Routes>
-              <Route path="/admin" element={<Subadmins />} />
-              <Route path="/admin/faculty" element={<Facultysubadmin />} />
-              <Route path="/admin/student" element={<Studentsubadmin />} />
+              <Route path='/admin'element={<Subadmins/>}/>
+              <Route path='/admin/faculty'element={<Facultyadmin/>}/>
+              <Route path='/admin/student'element={<Studentadmin/>}/>
             </Routes>
           </div>
         </div>
       </>
-    );
-  } else if (role === "faculty") {
-    return (
+    ) 
+  }else if(role === "faculty"){
+    return(
       <>
-        <Header />
+        <Header/>
         <div className="row">
           <div className="col-2">
-            <Asidebar data={facultysidebar} />
+            <Asidebar data={facultysidebar}/>
           </div>
           <div className="col-10">
             <Routes>
-              <Route path="/Faculty" element={<Faculty />} />
-              <Route path="/Student" element={<Student />} />
+              <Route path='/Faculty'element={<Faculty/>}/>
+              <Route path='/Student'element={<Student/>}/>
             </Routes>
           </div>
         </div>
       </>
-    );
-  }else if (role === "student") {
-    return (
+    ) 
+  } else if(role === "student"){
+    return(
       <>
-        <Header />
+        <Header/>
         <div className="row">
           <div className="col-2">
-            <Asidebar data={studentsidebar} />
+            <Asidebar data={studentsidebar}/>
           </div>
           <div className="col-10">
             <Routes>
-              <Route path="/Faculty" element={<Faculty />} />
-              <Route path="/Student" element={<student_student />} />
+              <Route path='/student'element={<Student_student/>}/>
             </Routes>
           </div>
         </div>
       </>
-    );
+    ) 
   }
 }
 
