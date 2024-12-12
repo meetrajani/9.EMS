@@ -16,60 +16,61 @@ import Student_student from "./componets/student/student_student";
 
 function App() {
 
-  let role = "admin"
+  let role = "admin";
 
-  if(role === "admin"){
-    return(
+  if (role === "admin") {
+    return (
       <>
-        <Header/>
+        <Header />
         <div className="row">
           <div className="col-2">
-            <Asidebar data={admin}/>
+            <Asidebar data={admin} />
           </div>
           <div className="col-10">
             <Routes>
-              <Route path='/admin'element={<Subadmins/>}/>
-              <Route path='/admin/faculty'element={<Facultyadmin/>}/>
-              <Route path='/admin/student'element={<Studentadmin/>}/>
+              <Route path="/admin" element={<Subadmins />} />
+              <Route path="/admin/faculty" element={<Facultyadmin />} />
+              <Route path="/admin/student" element={<Studentadmin />} />
             </Routes>
           </div>
         </div>
       </>
-    ) 
-  }else if(role === "faculty"){
-    return(
+    );
+  } else if (role === "faculty") {
+    return (
       <>
-        <Header/>
+        <Header />
         <div className="row">
           <div className="col-2">
-            <Asidebar data={facultysidebar}/>
+            <Asidebar data={facultysidebar} />
           </div>
           <div className="col-10">
             <Routes>
-              <Route path='/Faculty'element={<Faculty/>}/>
-              <Route path='/Student'element={<Student/>}/>
+              <Route path="/Faculty" element={<Faculty />} />
+              <Route path="/Student" element={<Student />} />
             </Routes>
           </div>
         </div>
       </>
-    ) 
-  } else if(role === "student"){
-    return(
+    );
+  } else if (role === "student") {
+    return (
       <>
-        <Header/>
+        <Header />
         <div className="row">
           <div className="col-2">
-            <Asidebar data={studentsidebar}/>
+            <Asidebar data={studentsidebar} />
           </div>
           <div className="col-10">
             <Routes>
-              <Route path='/student'element={<Student_student/>}/>
+              <Route path="/student" element={<Student_student />} />
             </Routes>
           </div>
         </div>
       </>
-    ) 
+    );
   }
+  
 }
 
 export default App;
