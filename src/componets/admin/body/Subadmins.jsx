@@ -38,7 +38,7 @@ const Subadmins = () => {
 
   const Deletesubadmin = (id) => {
     dispatch({ type: DELETE_SUBADMIN_PROGESS, paylod: id });
-    // console.log(_id);
+    console.log(id);
   };
 
   return (
