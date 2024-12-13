@@ -75,8 +75,8 @@ import {
       case POST_FACULTY_SUCCESS: {
         return {
           ...state,
-          dataIsLoded: true,
-          Faculty: state.Faculty.concat(action.data.faculty),
+          dataIsLoded: false,
+          Faculty: state.Faculty.concat(action.data),
         };
       }
       case POST_FACULTY_ERROR: {

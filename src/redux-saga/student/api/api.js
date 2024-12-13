@@ -17,9 +17,9 @@ export const getStudent = () => {
 
 export const postStudent = (action) => {
     return axios.post(BASE_URL + POST_STUDENT,action.paylod).then((res) => {
-        const data = res.data.data.student;
+      console.log("hiii",res);
+        const data = action.paylod;
         const status = res.status;
-        // console.log(res);
         return { data, status };
       })
       .catch((err) => console.log(err));

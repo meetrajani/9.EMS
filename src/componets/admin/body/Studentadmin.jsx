@@ -19,7 +19,8 @@ const Studentsubadmin = () => {
 
   // POST
   const [data, setdata] = useState({
-    id: JSON.stringify(Math.floor(Math.random() * 10000)),
+    id: Math.floor(Math.random() * 10000).toString(),
+    student_name: "",
     title: "",
     description: "",
     start_time: "",
@@ -27,7 +28,7 @@ const Studentsubadmin = () => {
     assigned_faculty: "",
     password: "",
     role: "student",
-  });
+  });  
 
   const changedata = (e) => {
     setdata({ ...data, [e.target.name]: e.target.value });

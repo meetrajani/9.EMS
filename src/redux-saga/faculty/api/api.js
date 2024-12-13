@@ -18,8 +18,9 @@ export const getFaculty = () => {
   
   export const postFaculty = (action) => {
     return axios.post(BASE_URL + POST_FACULTY,action.paylod).then((res) => {
-        const data = res.data.data;
+        const data = action.paylod;
         const status = res.status;
+        console.log(res);
         return { data, status };
       }).catch((err) => console.log(err));
   };

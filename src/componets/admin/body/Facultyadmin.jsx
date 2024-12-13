@@ -18,7 +18,14 @@ const Facultysubadmin = () => {
   }, []);
 
   // POST
-  const [add, setadd] = useState({});
+  const [add, setadd] = useState({
+    id: Math.floor(Math.random() * 10000).toString(),
+    faculty_name: "",
+    department: "",
+    password: "",
+    gender: "",
+    role: "faculty",
+  });
 
   const changedata = (e) => {
     setadd({ ...add, [e.target.name]: e.target.value });
