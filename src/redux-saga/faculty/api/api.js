@@ -20,7 +20,6 @@ export const getFaculty = () => {
     return axios.post(BASE_URL + POST_FACULTY,action.paylod).then((res) => {
         const data = action.paylod;
         const status = res.status;
-        console.log(res);
         return { data, status };
       }).catch((err) => console.log(err));
   };
